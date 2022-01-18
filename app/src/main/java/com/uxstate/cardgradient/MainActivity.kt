@@ -31,6 +31,11 @@ class MainActivity : ComponentActivity() {
 fun ImageCardComposable(painter: Painter, description:String, title:String) {
 
 
-   
+
+    Box(modifier = Modifier.fillMaxSize()){
+
+        //Layer 1
+        Image(painter = painter, contentDescription = description)
+    }
 
 }
