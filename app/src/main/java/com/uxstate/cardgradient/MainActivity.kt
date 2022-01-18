@@ -37,7 +37,7 @@ class MainActivity : ComponentActivity() {
 
 
 
-            Box(modifier = Modifier.fillMaxWidth(.5f)){
+            Box(modifier = Modifier.fillMaxWidth(.5f).padding(16.dp)){
 
                 //call ImageCardComposable
                 ImageCardComposable(painter = painter, description = description, title = title)
@@ -79,7 +79,7 @@ fun ImageCardComposable(painter: Painter, description: String, title: String) {
 
 
             //Layer 3 - Text - align to bottom left corner
-            Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.BottomStart){
+            Box(modifier = Modifier.fillMaxSize().padding(12.dp), contentAlignment = Alignment.BottomStart){
 
                 Text(text = title, style = TextStyle(color = Color.White, fontSize = 16.sp))
             }
