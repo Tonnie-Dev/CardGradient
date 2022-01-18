@@ -7,8 +7,11 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.width
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -44,7 +47,7 @@ fun ImageCardComposable(painter: Painter, description: String, title: String) {
                     .fillMaxSize()
                     .background(
                         brush = Brush.verticalGradient(
-                          colors=  listOf(
+                            colors = listOf(
                                 Color.Transparent,
                                 Color.Black
                             ),
@@ -52,6 +55,15 @@ fun ImageCardComposable(painter: Painter, description: String, title: String) {
                         )
                     )
         )
+        
+        
+        //Layer 3 - Text - align to bottom left corner
+        Box(modifier = Modifier.fillMaxWidth(), contentAlignment = Alignment.BottomStart){
+            
+            Text(text = title)
+        }
+        
+        
     }
 
 }
