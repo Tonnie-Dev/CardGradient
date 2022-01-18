@@ -34,8 +34,13 @@ class MainActivity : ComponentActivity() {
             val description = "Kermit Playing in the Snow"
 
 
-            //call ImageCardComposable
-            ImageCardComposable(painter = painter, description = description, title = title)
+
+
+            Box(modifier = Modifier.fillMaxWidth(.5f)){
+
+                //call ImageCardComposable
+                ImageCardComposable(painter = painter, description = description, title = title)
+            }
 
         }
     }
